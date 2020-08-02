@@ -18,7 +18,7 @@ describe('card validity', () => {
   });
 
   afterAll(async () => {
-    //await browser.close();
+    await browser.close();
   });
 
   test('1', async () => {
@@ -27,8 +27,7 @@ describe('card validity', () => {
     await input.type('4561261212345467');
     const submit = await page.$('.submit');
     submit.click();
-    const validity = await page.$('.card-validity-title');
-    await validity.waitForSelector('.valid');
+    await page.waitForSelector('.card-validity-title.valid');
   })
 });
 
