@@ -10,9 +10,9 @@ describe('card validity', () => {
 
   beforeAll(async () => {
     browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 100,
-      devtools: true,
+      // headless: false,
+      // slowMo: 100,
+      // devtools: true,
     });
     page = await browser.newPage();
   });
@@ -21,7 +21,7 @@ describe('card validity', () => {
     await browser.close();
   });
 
-  test('1', async () => {
+  test('validate', async () => {
     await page.goto(baseUrl);
     const input = await page.$('.card-number');
     await input.type('4561261212345467');
