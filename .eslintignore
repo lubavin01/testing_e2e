@@ -1,0 +1,7 @@
+dist
+coverage
+docs
+webpack.config.js
+webpack.*.js
+e2e
+__tests__

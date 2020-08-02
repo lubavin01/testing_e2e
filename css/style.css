@@ -1,0 +1,46 @@
+ul {
+  padding-inline-start: 0;
+}
+
+[data-payment='visa'] {
+  background-image: url("../pic/visa.png");
+}
+
+[data-payment='mastercard'] {
+  background-image: url("../pic/mastercard.png");
+}
+
+[data-payment='mir'] {
+  background-image: url("../pic/mir.png");
+}
+
+.payment {
+  width: 60px;
+  height: 30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
+.payment.selected {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+.payment-container {
+  display: flex;
+  list-style-type: none;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
